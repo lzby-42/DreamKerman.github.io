@@ -9,27 +9,34 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
 	title: "量子白羊的博客记事本",
-	subtitle: "记录思考，留存灵感", // 换了一个更实用的副标题
-	lang: "zh_CN",
+	subtitle: "记录思考，留存灵感",
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
-		hue: 220,
-		fixed: false, 
+		hue: 220, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
+		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
-		enable: false, 
-		src: "assets/images/demo-banner.png",
-		position: "center",
+		enable: false,
+		src: "assets/images/demo-banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
-			enable: false,
-			text: "",
-			url: "",
+			enable: true, // Display the credit text of the banner image
+			text: "", // Credit text to be displayed
+			url: "", // (Optional) URL link to the original artwork or artist's page
 		},
 	},
 	toc: {
-		enable: true, 
-		depth: 2,
+		enable: true, // Display the table of contents on the right side of the post
+		depth: 2, // Maximum heading depth to show in the table, from 1 to 3
 	},
-	favicon: [],
+	favicon: [
+		// Leave this array empty to use the default favicon
+		// {
+		//   src: '/favicon/icon.png',    // Path of the favicon, relative to the /public directory
+		//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
+		//   sizes: '32x32',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
+		// }
+	],
 };
 
 export const navBarConfig: NavBarConfig = {
@@ -38,17 +45,17 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
-			name: "Gitee",
-			url: "https://gitee.com/DreamKerman-aries",
-			external: true,
+			name: "GitHub",
+			url: "https://github.com/lzby-42", // Internal links should not include the base path, as it is automatically added
+			external: true, // Show an external link icon and will open in a new tab
 		},
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/logo.png",
+	avatar: "assets/images/logo.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "量子白羊",
-	bio: "向最美好的前途，那怕是漫长的路。", 
+	bio: "向最美好的前途，那怕是漫长的路",
 	links: [
 		{
 			name: "GitHub",
@@ -56,13 +63,8 @@ export const profileConfig: ProfileConfig = {
 			url: "https://github.com/lzby-42",
 		},
 		{
-			name: "Gitee",
-			icon: "simple-icons:gitee", 
-			url: "https://gitee.com/DreamKerman-aries",
-		},
-		{
 			name: "Email",
-			icon: "fa6-solid:envelope",
+			icon: "fa6-brands:envelope",
 			url: "mailto:2829478110@qq.com",
 		},
 		{
@@ -80,5 +82,7 @@ export const licenseConfig: LicenseConfig = {
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
-	theme: "github-dark", 
+	// Note: Some styles (such as background color) are being overridden, see the astro.config.mjs file.
+	// Please select a dark theme, as this blog theme currently only supports dark background color
+	theme: "github-dark",
 };
