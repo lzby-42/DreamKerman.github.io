@@ -48,7 +48,7 @@ export const navBarConfig: NavBarConfig = {
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/logo.png",
 	name: "量子白羊",
-	bio: "向最美还的前途，那怕是漫长的路。", 
+	bio: "向最美好的前途，那怕是漫长的路。", 
 	links: [
 		{
 			name: "GitHub",
