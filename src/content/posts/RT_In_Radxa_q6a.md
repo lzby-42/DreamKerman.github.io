@@ -1,6 +1,6 @@
 ---
 title: 构建与引导 Radxa 实时内核完全记录
-published: 2026-2-6
+published: 2026-02-06
 description: 为嵌入式设备构建实时内核，是配置管理与引导理解的双重挑战。本指南源自一次从环境搭建到引导成功的完整实战，特别适合 Radxa 等嵌入式开发板。
 tags: [Linux, 嵌入式开发, Radxa, 实时内核, PREEMPT_RT, 内核构建]
 category: 技术指南
